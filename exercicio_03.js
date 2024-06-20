@@ -45,7 +45,7 @@ let saldoConta = function () {
     alert(`O Seu Saldo é R$ ${saldo.toFixed(2)}`);
 }
 
-let boaVindasNome = function () {
+let boasVindasNome = function () {
     let nome = prompt('Qual o seu nome: ');
     alert(`Seja Bem Vindo ${nome}`);
 }
