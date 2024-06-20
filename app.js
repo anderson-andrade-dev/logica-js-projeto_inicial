@@ -1,12 +1,14 @@
 // comentario de uma linha
 /* comentario de varia linhas */
 alert('Seja Bem Vindo ao Jogo!');
-let numeroSecreto = parseInt(Math.random() * 100 + 1);
+let numeroInicial = 1;
+let numeroLimite = 10;
+let numeroSecreto = parseInt(Math.random() * numeroLimite + numeroInicial);
 let tentativas = 1;
 let chute;
 
 while (chute != numeroSecreto) {
-    chute = prompt('Entre com um numero de 1 a 100: ');
+    chute = prompt(`Entre com um numero de ${numeroInicial} a ${numeroLimite}: `);
     if (chute == numeroSecreto) {
         break;
     } else {
