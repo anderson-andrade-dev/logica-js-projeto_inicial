@@ -1,15 +1,14 @@
 // comentario de uma linha
 /* comentario de varia linhas */
 alert('Seja Bem Vindo ao Jogo!');
-let numeroSecreto = 5;
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
 let tentativas = 1;
-console.log(numeroSecreto);
 let chute;
 
 while (chute != numeroSecreto) {
-    chute = prompt('Entre com um numero de 1 a 10: ');
+    chute = prompt('Entre com um numero de 1 a 100: ');
     if (chute == numeroSecreto) {
-        alert(`Voce acertou o numero secreto que é =  ${numeroSecreto} e você acertou com ${tentativas}`);
+        break;
     } else {
         if (chute > numeroSecreto) {
             alert('O numero que você digitou é maior que o numero secreto!');
@@ -18,4 +17,7 @@ while (chute != numeroSecreto) {
         }
         tentativas++
     }
+
 }
+let palavra = tentativas == 1 ? 'Tentativa' : 'Tentativas';
+alert(`Voce acertou o numero secreto que é =  ${numeroSecreto} e você acertou com ${tentativas} ${palavra}`);
